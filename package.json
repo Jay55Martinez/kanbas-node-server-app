@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "name": "ls",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jay55Martinez/kanbas-node-server-app.git"
+  },
+  "author": "Jay Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jay55Martinez/kanbas-node-server-app/issues"
+  },
+  "homepage": "https://github.com/Jay55Martinez/kanbas-node-server-app#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}
