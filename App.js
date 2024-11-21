@@ -6,6 +6,7 @@ import Lab5 from "./Lab5/index.js";
 import UserRoutes from "./Kanbas/Users/routes.js";
 import cors from "cors";
 import session from "express-session";
+import CourseRoutes from "./Kanbas/Courses/routes.js";
 
 const app = express();
 
@@ -34,5 +35,6 @@ app.use(session(sessionOptions));
 UserRoutes(app);
 HelloRoutes(app);
 Lab5(app);
+CourseRoutes(app);
 
 app.listen(process.env.PORT || 4000);
