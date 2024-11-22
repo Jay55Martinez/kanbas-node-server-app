@@ -16,21 +16,21 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    credentials: true,
-    origin: process.env.NETLIFY_URL || "http://localhost:3000",
+  credentials: true,
+  origin: "*",
 }));
 const sessionOptions = {
-    secret: process.env.SESSION_SECRET || "kanbas",
-    resave: false,
-    saveUninitialized: false,
+  secret: process.env.SESSION_SECRET || "kanbas",
+  resave: false,
+  saveUninitialized: false,
   };
   if (process.env.NODE_ENV !== "development") {
-    sessionOptions.proxy = true;
-    sessionOptions.cookie = {
-      sameSite: "none",
-      secure: true,
-      domain: process.env.NODE_SERVER_DOMAIN,
-    };
+  sessionOptions.proxy = true;
+  sessionOptions.cookie = {
+    sameSite: "none",
+    secure: true,
+    domain: process.env.NODE_SERVER_DOMAIN,
+  };
   }
 app.use(session(sessionOptions));
 // req is all the information comming from the client
